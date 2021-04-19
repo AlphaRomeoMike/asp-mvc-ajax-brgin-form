@@ -14,6 +14,7 @@
     <div id="updated">
         @using (Ajax.BeginForm("Create", "Employee", new AjaxOptions()
         {
+
             HttpMethod = "POST",
             InsertionMode = InsertionMode.Replace,
             UpdateTargetId = "updated",
@@ -21,6 +22,7 @@
             LoadingElementDuration = 2000,
             Confirm = "Are you sure?",
             OnComplete = "ClearFields"
+            //We can have all the ajax methods we want over here
         }))
         {
             @Html.AntiForgeryToken()
